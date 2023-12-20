@@ -2,6 +2,7 @@
 outputDir: "."
 generatorName: java
 apiPackage: io.lenra.api.internal.client
-artifactId: lenra-internal-api-client
 groupId: io.lenra
+artifactId: lenra-internal-api-client
+artifactVersion: "1.0.0"
 modelPackage: io.lenra.api.internal.client.model
