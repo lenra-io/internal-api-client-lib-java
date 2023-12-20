@@ -1,4 +1,7 @@
 '!include': 'common.yml'
 outputDir: "."
 generatorName: java
-apiPackage: io.lenra.internal-api-client
+apiPackage: io.lenra.api.internal.client
+artifactId: lenra-internal-api-client
+groupId: io.lenra
+modelPackage: io.lenra.api.internal.client.model

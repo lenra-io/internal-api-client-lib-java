@@ -26,12 +26,12 @@ Aborts a transaction
 ### Example
 ```java
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -86,12 +86,12 @@ Commits a transaction
 ### Example
 ```java
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -139,19 +139,19 @@ null (empty response body)
 
 <a id="createDocument"></a>
 # **createDocument**
-> Map&lt;String, Object&gt; createDocument(coll, body)
+> DataDocument createDocument(coll, body)
 
 Creates a document in database
 
 ### Example
 ```java
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -166,7 +166,7 @@ public class Example {
     String coll = "coll_example"; // String | The document collection name
     Object body = null; // Object | The document to create
     try {
-      Map<String, Object> result = apiInstance.createDocument(coll, body);
+      DataDocument result = apiInstance.createDocument(coll, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#createDocument");
@@ -188,7 +188,7 @@ public class Example {
 
 ### Return type
 
-**Map&lt;String, Object&gt;**
+[**DataDocument**](DataDocument.md)
 
 ### Authorization
 
@@ -213,12 +213,12 @@ Creates a transaction
 ### Example
 ```java
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -274,12 +274,12 @@ Deletes a collection from database
 ### Example
 ```java
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -331,19 +331,19 @@ null (empty response body)
 
 <a id="deleteDocumentById"></a>
 # **deleteDocumentById**
-> Map&lt;String, Object&gt; deleteDocumentById(coll, id)
+> DataDocument deleteDocumentById(coll, id)
 
 Deletes a document from database
 
 ### Example
 ```java
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -358,7 +358,7 @@ public class Example {
     String coll = "coll_example"; // String | The document collection name
     String id = "id_example"; // String | The document identifier
     try {
-      Map<String, Object> result = apiInstance.deleteDocumentById(coll, id);
+      DataDocument result = apiInstance.deleteDocumentById(coll, id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#deleteDocumentById");
@@ -380,7 +380,7 @@ public class Example {
 
 ### Return type
 
-**Map&lt;String, Object&gt;**
+[**DataDocument**](DataDocument.md)
 
 ### Authorization
 
@@ -405,12 +405,12 @@ Finds documents in database
 ### Example
 ```java
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -465,19 +465,19 @@ public class Example {
 
 <a id="getDocumentById"></a>
 # **getDocumentById**
-> Map&lt;String, Object&gt; getDocumentById(coll, id)
+> DataDocument getDocumentById(coll, id)
 
 Gets a document from database
 
 ### Example
 ```java
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -492,7 +492,7 @@ public class Example {
     String coll = "coll_example"; // String | The document collection name
     String id = "id_example"; // String | The document identifier
     try {
-      Map<String, Object> result = apiInstance.getDocumentById(coll, id);
+      DataDocument result = apiInstance.getDocumentById(coll, id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#getDocumentById");
@@ -514,7 +514,7 @@ public class Example {
 
 ### Return type
 
-**Map&lt;String, Object&gt;**
+[**DataDocument**](DataDocument.md)
 
 ### Authorization
 
@@ -532,19 +532,19 @@ public class Example {
 
 <a id="getDocuments"></a>
 # **getDocuments**
-> List&lt;Map&lt;String, Object&gt;&gt; getDocuments(coll)
+> List&lt;DataDocument&gt; getDocuments(coll)
 
 Gets documents from database
 
 ### Example
 ```java
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -558,7 +558,7 @@ public class Example {
     DataApi apiInstance = new DataApi(defaultClient);
     String coll = "coll_example"; // String | The document collection name
     try {
-      List<Map<String, Object>> result = apiInstance.getDocuments(coll);
+      List<DataDocument> result = apiInstance.getDocuments(coll);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#getDocuments");
@@ -579,7 +579,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;Map&lt;String, Object&gt;&gt;**](Map.md)
+[**List&lt;DataDocument&gt;**](DataDocument.md)
 
 ### Authorization
 
@@ -597,19 +597,19 @@ public class Example {
 
 <a id="updateDocumentById"></a>
 # **updateDocumentById**
-> Map&lt;String, Object&gt; updateDocumentById(coll, id, dataDocument)
+> DataDocument updateDocumentById(coll, id, dataDocument)
 
 Updates a document in database
 
 ### Example
 ```java
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -625,7 +625,7 @@ public class Example {
     String id = "id_example"; // String | The document identifier
     DataDocument dataDocument = new DataDocument(); // DataDocument | The document to update
     try {
-      Map<String, Object> result = apiInstance.updateDocumentById(coll, id, dataDocument);
+      DataDocument result = apiInstance.updateDocumentById(coll, id, dataDocument);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#updateDocumentById");
@@ -648,7 +648,7 @@ public class Example {
 
 ### Return type
 
-**Map&lt;String, Object&gt;**
+[**DataDocument**](DataDocument.md)
 
 ### Authorization
 
@@ -673,12 +673,12 @@ Updates many documents in database
 ### Example
 ```java
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {

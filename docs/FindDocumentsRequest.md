@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**query** |  | Mongo data query |  |
+|**query** | **Map&lt;String, Object&gt;** | Mongo data query |  |
 |**projection** |  |  |  [optional] |
 
 

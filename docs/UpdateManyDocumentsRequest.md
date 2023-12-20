@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**filter** |  | Mongo data query |  |
-|**update** |  | Mongo data query |  |
+|**filter** | **Map&lt;String, Object&gt;** | Mongo data query |  |
+|**update** | **Map&lt;String, Object&gt;** | Mongo data query |  |
 
 
 

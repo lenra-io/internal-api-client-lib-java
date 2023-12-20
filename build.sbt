@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "org.openapitools",
-    name := "openapi-java-client",
+    organization := "io.lenra",
+    name := "lenra-internal-api-client",
     version := "0.0.0",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),

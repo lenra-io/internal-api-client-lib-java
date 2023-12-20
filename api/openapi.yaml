@@ -302,28 +302,40 @@ paths:
 components:
   schemas:
     data.document:
-      additionalProperties: {}
+      additionalProperties: true
       description: A document in MongoDB database
+      example:
+        _id: _id
+      properties:
+        _id:
+          description: The document identifier
+          type: string
       title: Document
     data.query:
-      additionalProperties: {}
+      additionalProperties: true
       description: Mongo data query
+      properties: {}
       title: Query
+      type: object
     data.result.find:
-      additionalProperties: {}
+      additionalProperties: true
       description: Find query result.
       title: FindResult
+      type: object
     data.update:
-      additionalProperties: {}
+      additionalProperties: true
       description: Mongo data query
       title: Query
+      type: object
     findDocuments_request:
       additionalProperties: {}
       properties:
         query:
-          additionalProperties: {}
+          additionalProperties: true
           description: Mongo data query
+          properties: {}
           title: Query
+          type: object
         projection:
           additionalProperties: {}
           nullable: true
@@ -333,13 +345,16 @@ components:
       additionalProperties: {}
       properties:
         filter:
-          additionalProperties: {}
+          additionalProperties: true
           description: Mongo data query
+          properties: {}
           title: Query
+          type: object
         update:
-          additionalProperties: {}
+          additionalProperties: true
           description: Mongo data query
           title: Query
+          type: object
       required:
       - filter
       - update

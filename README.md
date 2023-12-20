@@ -1,8 +1,12 @@
-# openapi-java-client
+# lenra-internal-api-client
+
+```bash
+docker run --rm -v ${PWD}:/local --workdir /local openapitools/openapi-generator-cli batch /local/gen-conf/java.yml
+```
 
 Lenra server internal API
 - API version: 0.0.0
-  - Build date: 2023-12-20T09:46:59.258627917Z[Etc/UTC]
+  - Build date: 2023-12-20T13:30:58.062007Z[Etc/UTC]
 
 The API usable by the Lenra applications
 
@@ -39,8 +43,8 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>org.openapitools</groupId>
-  <artifactId>openapi-java-client</artifactId>
+  <groupId>io.lenra</groupId>
+  <artifactId>lenra-internal-api-client</artifactId>
   <version>0.0.0</version>
   <scope>compile</scope>
 </dependency>
@@ -52,12 +56,12 @@ Add this dependency to your project's build file:
 
 ```groovy
   repositories {
-    mavenCentral()     // Needed if the 'openapi-java-client' jar has been published to maven central.
-    mavenLocal()       // Needed if the 'openapi-java-client' jar has been published to the local maven repo.
+    mavenCentral()     // Needed if the 'lenra-internal-api-client' jar has been published to maven central.
+    mavenLocal()       // Needed if the 'lenra-internal-api-client' jar has been published to the local maven repo.
   }
 
   dependencies {
-     implementation "org.openapitools:openapi-java-client:0.0.0"
+     implementation "io.lenra:lenra-internal-api-client:0.0.0"
   }
 ```
 
@@ -71,7 +75,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/openapi-java-client-0.0.0.jar`
+* `target/lenra-internal-api-client-0.0.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -81,12 +85,12 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import io.lenra.ApiClient;
-import io.lenra.ApiException;
-import io.lenra.Configuration;
-import io.lenra.auth.*;
-import io.lenra.models.*;
-import io.lenra.internal_api_client.DataApi;
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -133,6 +137,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [DataDocument](docs/DataDocument.md)
  - [FindDocumentsRequest](docs/FindDocumentsRequest.md)
  - [UpdateManyDocumentsRequest](docs/UpdateManyDocumentsRequest.md)
 

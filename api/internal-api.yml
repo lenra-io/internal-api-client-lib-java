@@ -25,14 +25,16 @@ components:
       title: Document
       description: A document in MongoDB database
       type: object
-      patternProperties:
-        ^[a-zA-Z0-9_]+$:
-          type: object
-      additionalProperties: {}
+      properties:
+        _id:
+          type: string
+          description: The document identifier
+      additionalProperties: true
     data.query:
       title: Query
       description: Mongo data query
       type: object
+      properties: {}
       additionalProperties: true
     data.result.find:
       title: FindResult
