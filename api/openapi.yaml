@@ -264,7 +264,6 @@ paths:
             application/json:
               schema:
                 description: The transaction token
-                type: string
           description: Transaction created
       security:
       - bearerAuth:
@@ -305,28 +304,26 @@ components:
       additionalProperties: true
       description: A document in MongoDB database
       example:
-        _id: _id
+        _id: ""
       properties:
         _id:
           description: The document identifier
-          type: string
       title: Document
     data.query:
       additionalProperties: true
       description: Mongo data query
       properties: {}
       title: Query
-      type: object
     data.result.find:
       additionalProperties: true
       description: Find query result.
+      items:
+        $ref: '#/components/schemas/data.document'
       title: FindResult
-      type: object
     data.update:
       additionalProperties: true
       description: Mongo data query
       title: Query
-      type: object
     findDocuments_request:
       additionalProperties: {}
       properties:
@@ -335,7 +332,6 @@ components:
           description: Mongo data query
           properties: {}
           title: Query
-          type: object
         projection:
           additionalProperties: {}
           nullable: true
@@ -349,12 +345,10 @@ components:
           description: Mongo data query
           properties: {}
           title: Query
-          type: object
         update:
           additionalProperties: true
           description: Mongo data query
           title: Query
-          type: object
       required:
       - filter
       - update

@@ -8,7 +8,7 @@ A document in MongoDB database
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**id** | **String** | The document identifier |  [optional] |
+|**id** | **Object** | The document identifier |  [optional] |
 
 
 

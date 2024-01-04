@@ -206,7 +206,7 @@ public class Example {
 
 <a id="createTransaction"></a>
 # **createTransaction**
-> String createTransaction()
+> Object createTransaction()
 
 Creates a transaction
 
@@ -231,7 +231,7 @@ public class Example {
 
     DataApi apiInstance = new DataApi(defaultClient);
     try {
-      String result = apiInstance.createTransaction();
+      Object result = apiInstance.createTransaction();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#createTransaction");
@@ -249,7 +249,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**String**
+**Object**
 
 ### Authorization
 

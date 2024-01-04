@@ -39,7 +39,9 @@ components:
     data.result.find:
       title: FindResult
       description: Find query result.
-      type: object
+      type: array
+      items:
+        $ref: "#/components/schemas/data.document"
       additionalProperties: {}
     data.update:
       title: Query
