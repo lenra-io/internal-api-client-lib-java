@@ -139,7 +139,7 @@ null (empty response body)
 
 <a id="createDocument"></a>
 # **createDocument**
-> DataDocument createDocument(coll, body)
+> Map&lt;String, Object&gt; createDocument(coll, body)
 
 Creates a document in database
 
@@ -166,7 +166,7 @@ public class Example {
     String coll = "coll_example"; // String | The document collection name
     Object body = null; // Object | The document to create
     try {
-      DataDocument result = apiInstance.createDocument(coll, body);
+      Map<String, Object> result = apiInstance.createDocument(coll, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#createDocument");
@@ -188,7 +188,7 @@ public class Example {
 
 ### Return type
 
-[**DataDocument**](DataDocument.md)
+**Map&lt;String, Object&gt;**
 
 ### Authorization
 
@@ -331,7 +331,7 @@ null (empty response body)
 
 <a id="deleteDocumentById"></a>
 # **deleteDocumentById**
-> DataDocument deleteDocumentById(coll, id)
+> Map&lt;String, Object&gt; deleteDocumentById(coll, id)
 
 Deletes a document from database
 
@@ -358,7 +358,7 @@ public class Example {
     String coll = "coll_example"; // String | The document collection name
     String id = "id_example"; // String | The document identifier
     try {
-      DataDocument result = apiInstance.deleteDocumentById(coll, id);
+      Map<String, Object> result = apiInstance.deleteDocumentById(coll, id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#deleteDocumentById");
@@ -380,7 +380,7 @@ public class Example {
 
 ### Return type
 
-[**DataDocument**](DataDocument.md)
+**Map&lt;String, Object&gt;**
 
 ### Authorization
 
@@ -465,7 +465,7 @@ public class Example {
 
 <a id="getDocumentById"></a>
 # **getDocumentById**
-> DataDocument getDocumentById(coll, id)
+> Map&lt;String, Object&gt; getDocumentById(coll, id)
 
 Gets a document from database
 
@@ -492,7 +492,7 @@ public class Example {
     String coll = "coll_example"; // String | The document collection name
     String id = "id_example"; // String | The document identifier
     try {
-      DataDocument result = apiInstance.getDocumentById(coll, id);
+      Map<String, Object> result = apiInstance.getDocumentById(coll, id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#getDocumentById");
@@ -514,7 +514,7 @@ public class Example {
 
 ### Return type
 
-[**DataDocument**](DataDocument.md)
+**Map&lt;String, Object&gt;**
 
 ### Authorization
 
@@ -532,7 +532,7 @@ public class Example {
 
 <a id="getDocuments"></a>
 # **getDocuments**
-> List&lt;DataDocument&gt; getDocuments(coll)
+> List&lt;Map&lt;String, Object&gt;&gt; getDocuments(coll)
 
 Gets documents from database
 
@@ -558,7 +558,7 @@ public class Example {
     DataApi apiInstance = new DataApi(defaultClient);
     String coll = "coll_example"; // String | The document collection name
     try {
-      List<DataDocument> result = apiInstance.getDocuments(coll);
+      List<Map<String, Object>> result = apiInstance.getDocuments(coll);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#getDocuments");
@@ -579,7 +579,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;DataDocument&gt;**](DataDocument.md)
+[**List&lt;Map&lt;String, Object&gt;&gt;**](Map.md)
 
 ### Authorization
 
@@ -597,7 +597,7 @@ public class Example {
 
 <a id="updateDocumentById"></a>
 # **updateDocumentById**
-> DataDocument updateDocumentById(coll, id, dataDocument)
+> Map&lt;String, Object&gt; updateDocumentById(coll, id, dataDocument)
 
 Updates a document in database
 
@@ -625,7 +625,7 @@ public class Example {
     String id = "id_example"; // String | The document identifier
     DataDocument dataDocument = new DataDocument(); // DataDocument | The document to update
     try {
-      DataDocument result = apiInstance.updateDocumentById(coll, id, dataDocument);
+      Map<String, Object> result = apiInstance.updateDocumentById(coll, id, dataDocument);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#updateDocumentById");
@@ -648,7 +648,7 @@ public class Example {
 
 ### Return type
 
-[**DataDocument**](DataDocument.md)
+**Map&lt;String, Object&gt;**
 
 ### Authorization
 

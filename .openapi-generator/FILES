@@ -5,7 +5,6 @@ api/openapi.yaml
 build.gradle
 build.sbt
 docs/DataApi.md
-docs/DataDocument.md
 docs/FindDocumentsRequest.md
 docs/UpdateManyDocumentsRequest.md
 git_push.sh
@@ -35,6 +34,8 @@ src/main/java/io/lenra/api/internal/auth/HttpBasicAuth.java
 src/main/java/io/lenra/api/internal/auth/HttpBearerAuth.java
 src/main/java/io/lenra/api/internal/client/DataApi.java
 src/main/java/io/lenra/api/internal/client/model/AbstractOpenApiSchema.java
-src/main/java/io/lenra/api/internal/client/model/DataDocument.java
 src/main/java/io/lenra/api/internal/client/model/FindDocumentsRequest.java
 src/main/java/io/lenra/api/internal/client/model/UpdateManyDocumentsRequest.java
+src/test/java/io/lenra/api/internal/client/DataApiTest.java
+src/test/java/io/lenra/api/internal/client/model/FindDocumentsRequestTest.java
+src/test/java/io/lenra/api/internal/client/model/UpdateManyDocumentsRequestTest.java

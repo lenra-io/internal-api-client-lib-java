@@ -370,7 +370,7 @@ public class DataApi {
      * 
      * @param coll The document collection name (required)
      * @param body The document to create (required)
-     * @return DataDocument
+     * @return Map&lt;String, Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -378,8 +378,8 @@ public class DataApi {
         <tr><td> 200 </td><td> Document created </td><td>  -  </td></tr>
      </table>
      */
-    public DataDocument createDocument(String coll, Object body) throws ApiException {
-        ApiResponse<DataDocument> localVarResp = createDocumentWithHttpInfo(coll, body);
+    public Map<String, Object> createDocument(String coll, Object body) throws ApiException {
+        ApiResponse<Map<String, Object>> localVarResp = createDocumentWithHttpInfo(coll, body);
         return localVarResp.getData();
     }
 
@@ -388,7 +388,7 @@ public class DataApi {
      * 
      * @param coll The document collection name (required)
      * @param body The document to create (required)
-     * @return ApiResponse&lt;DataDocument&gt;
+     * @return ApiResponse&lt;Map&lt;String, Object&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -396,9 +396,9 @@ public class DataApi {
         <tr><td> 200 </td><td> Document created </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataDocument> createDocumentWithHttpInfo(String coll, Object body) throws ApiException {
+    public ApiResponse<Map<String, Object>> createDocumentWithHttpInfo(String coll, Object body) throws ApiException {
         okhttp3.Call localVarCall = createDocumentValidateBeforeCall(coll, body, null);
-        Type localVarReturnType = new TypeToken<DataDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -416,10 +416,10 @@ public class DataApi {
         <tr><td> 200 </td><td> Document created </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createDocumentAsync(String coll, Object body, final ApiCallback<DataDocument> _callback) throws ApiException {
+    public okhttp3.Call createDocumentAsync(String coll, Object body, final ApiCallback<Map<String, Object>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = createDocumentValidateBeforeCall(coll, body, _callback);
-        Type localVarReturnType = new TypeToken<DataDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -734,7 +734,7 @@ public class DataApi {
      * 
      * @param coll The document collection name (required)
      * @param id The document identifier (required)
-     * @return DataDocument
+     * @return Map&lt;String, Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -742,8 +742,8 @@ public class DataApi {
         <tr><td> 200 </td><td> Document deleted </td><td>  -  </td></tr>
      </table>
      */
-    public DataDocument deleteDocumentById(String coll, String id) throws ApiException {
-        ApiResponse<DataDocument> localVarResp = deleteDocumentByIdWithHttpInfo(coll, id);
+    public Map<String, Object> deleteDocumentById(String coll, String id) throws ApiException {
+        ApiResponse<Map<String, Object>> localVarResp = deleteDocumentByIdWithHttpInfo(coll, id);
         return localVarResp.getData();
     }
 
@@ -752,7 +752,7 @@ public class DataApi {
      * 
      * @param coll The document collection name (required)
      * @param id The document identifier (required)
-     * @return ApiResponse&lt;DataDocument&gt;
+     * @return ApiResponse&lt;Map&lt;String, Object&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -760,9 +760,9 @@ public class DataApi {
         <tr><td> 200 </td><td> Document deleted </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataDocument> deleteDocumentByIdWithHttpInfo(String coll, String id) throws ApiException {
+    public ApiResponse<Map<String, Object>> deleteDocumentByIdWithHttpInfo(String coll, String id) throws ApiException {
         okhttp3.Call localVarCall = deleteDocumentByIdValidateBeforeCall(coll, id, null);
-        Type localVarReturnType = new TypeToken<DataDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -780,10 +780,10 @@ public class DataApi {
         <tr><td> 200 </td><td> Document deleted </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call deleteDocumentByIdAsync(String coll, String id, final ApiCallback<DataDocument> _callback) throws ApiException {
+    public okhttp3.Call deleteDocumentByIdAsync(String coll, String id, final ApiCallback<Map<String, Object>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = deleteDocumentByIdValidateBeforeCall(coll, id, _callback);
-        Type localVarReturnType = new TypeToken<DataDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1000,7 +1000,7 @@ public class DataApi {
      * 
      * @param coll The document collection name (required)
      * @param id The document identifier (required)
-     * @return DataDocument
+     * @return Map&lt;String, Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1008,8 +1008,8 @@ public class DataApi {
         <tr><td> 200 </td><td> Document created </td><td>  -  </td></tr>
      </table>
      */
-    public DataDocument getDocumentById(String coll, String id) throws ApiException {
-        ApiResponse<DataDocument> localVarResp = getDocumentByIdWithHttpInfo(coll, id);
+    public Map<String, Object> getDocumentById(String coll, String id) throws ApiException {
+        ApiResponse<Map<String, Object>> localVarResp = getDocumentByIdWithHttpInfo(coll, id);
         return localVarResp.getData();
     }
 
@@ -1018,7 +1018,7 @@ public class DataApi {
      * 
      * @param coll The document collection name (required)
      * @param id The document identifier (required)
-     * @return ApiResponse&lt;DataDocument&gt;
+     * @return ApiResponse&lt;Map&lt;String, Object&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1026,9 +1026,9 @@ public class DataApi {
         <tr><td> 200 </td><td> Document created </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataDocument> getDocumentByIdWithHttpInfo(String coll, String id) throws ApiException {
+    public ApiResponse<Map<String, Object>> getDocumentByIdWithHttpInfo(String coll, String id) throws ApiException {
         okhttp3.Call localVarCall = getDocumentByIdValidateBeforeCall(coll, id, null);
-        Type localVarReturnType = new TypeToken<DataDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1046,10 +1046,10 @@ public class DataApi {
         <tr><td> 200 </td><td> Document created </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDocumentByIdAsync(String coll, String id, final ApiCallback<DataDocument> _callback) throws ApiException {
+    public okhttp3.Call getDocumentByIdAsync(String coll, String id, final ApiCallback<Map<String, Object>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getDocumentByIdValidateBeforeCall(coll, id, _callback);
-        Type localVarReturnType = new TypeToken<DataDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1125,7 +1125,7 @@ public class DataApi {
      * Gets documents from database
      * 
      * @param coll The document collection name (required)
-     * @return List&lt;DataDocument&gt;
+     * @return List&lt;Map&lt;String, Object&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1133,8 +1133,8 @@ public class DataApi {
         <tr><td> 200 </td><td> Documents found </td><td>  -  </td></tr>
      </table>
      */
-    public List<DataDocument> getDocuments(String coll) throws ApiException {
-        ApiResponse<List<DataDocument>> localVarResp = getDocumentsWithHttpInfo(coll);
+    public List<Map<String, Object>> getDocuments(String coll) throws ApiException {
+        ApiResponse<List<Map<String, Object>>> localVarResp = getDocumentsWithHttpInfo(coll);
         return localVarResp.getData();
     }
 
@@ -1142,7 +1142,7 @@ public class DataApi {
      * Gets documents from database
      * 
      * @param coll The document collection name (required)
-     * @return ApiResponse&lt;List&lt;DataDocument&gt;&gt;
+     * @return ApiResponse&lt;List&lt;Map&lt;String, Object&gt;&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1150,9 +1150,9 @@ public class DataApi {
         <tr><td> 200 </td><td> Documents found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<DataDocument>> getDocumentsWithHttpInfo(String coll) throws ApiException {
+    public ApiResponse<List<Map<String, Object>>> getDocumentsWithHttpInfo(String coll) throws ApiException {
         okhttp3.Call localVarCall = getDocumentsValidateBeforeCall(coll, null);
-        Type localVarReturnType = new TypeToken<List<DataDocument>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<Map<String, Object>>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1169,10 +1169,10 @@ public class DataApi {
         <tr><td> 200 </td><td> Documents found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDocumentsAsync(String coll, final ApiCallback<List<DataDocument>> _callback) throws ApiException {
+    public okhttp3.Call getDocumentsAsync(String coll, final ApiCallback<List<Map<String, Object>>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getDocumentsValidateBeforeCall(coll, _callback);
-        Type localVarReturnType = new TypeToken<List<DataDocument>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<Map<String, Object>>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1264,7 +1264,7 @@ public class DataApi {
      * @param coll The document collection name (required)
      * @param id The document identifier (required)
      * @param dataDocument The document to update (required)
-     * @return DataDocument
+     * @return Map&lt;String, Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1272,8 +1272,8 @@ public class DataApi {
         <tr><td> 200 </td><td> Document updated </td><td>  -  </td></tr>
      </table>
      */
-    public DataDocument updateDocumentById(String coll, String id, DataDocument dataDocument) throws ApiException {
-        ApiResponse<DataDocument> localVarResp = updateDocumentByIdWithHttpInfo(coll, id, dataDocument);
+    public Map<String, Object> updateDocumentById(String coll, String id, DataDocument dataDocument) throws ApiException {
+        ApiResponse<Map<String, Object>> localVarResp = updateDocumentByIdWithHttpInfo(coll, id, dataDocument);
         return localVarResp.getData();
     }
 
@@ -1283,7 +1283,7 @@ public class DataApi {
      * @param coll The document collection name (required)
      * @param id The document identifier (required)
      * @param dataDocument The document to update (required)
-     * @return ApiResponse&lt;DataDocument&gt;
+     * @return ApiResponse&lt;Map&lt;String, Object&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1291,9 +1291,9 @@ public class DataApi {
         <tr><td> 200 </td><td> Document updated </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataDocument> updateDocumentByIdWithHttpInfo(String coll, String id, DataDocument dataDocument) throws ApiException {
+    public ApiResponse<Map<String, Object>> updateDocumentByIdWithHttpInfo(String coll, String id, DataDocument dataDocument) throws ApiException {
         okhttp3.Call localVarCall = updateDocumentByIdValidateBeforeCall(coll, id, dataDocument, null);
-        Type localVarReturnType = new TypeToken<DataDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1312,10 +1312,10 @@ public class DataApi {
         <tr><td> 200 </td><td> Document updated </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateDocumentByIdAsync(String coll, String id, DataDocument dataDocument, final ApiCallback<DataDocument> _callback) throws ApiException {
+    public okhttp3.Call updateDocumentByIdAsync(String coll, String id, DataDocument dataDocument, final ApiCallback<Map<String, Object>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = updateDocumentByIdValidateBeforeCall(coll, id, dataDocument, _callback);
-        Type localVarReturnType = new TypeToken<DataDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

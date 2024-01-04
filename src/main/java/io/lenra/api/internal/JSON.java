@@ -93,7 +93,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter);
         gsonBuilder.registerTypeAdapter(LocalDate.class, localDateTypeAdapter);
         gsonBuilder.registerTypeAdapter(byte[].class, byteArrayAdapter);
-        gsonBuilder.registerTypeAdapterFactory(new io.lenra.api.internal.client.model.DataDocument.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new io.lenra.api.internal.client.model.FindDocumentsRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new io.lenra.api.internal.client.model.UpdateManyDocumentsRequest.CustomTypeAdapterFactory());
         gson = gsonBuilder.create();

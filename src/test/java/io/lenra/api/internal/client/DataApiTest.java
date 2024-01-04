@@ -64,7 +64,7 @@ public class DataApiTest {
     public void createDocumentTest() throws ApiException {
         String coll = null;
         Object body = null;
-        DataDocument response = api.createDocument(coll, body);
+        Map<String, Object> response = api.createDocument(coll, body);
         // TODO: test validations
     }
 
@@ -100,7 +100,7 @@ public class DataApiTest {
     public void deleteDocumentByIdTest() throws ApiException {
         String coll = null;
         String id = null;
-        DataDocument response = api.deleteDocumentById(coll, id);
+        Map<String, Object> response = api.deleteDocumentById(coll, id);
         // TODO: test validations
     }
 
@@ -126,7 +126,7 @@ public class DataApiTest {
     public void getDocumentByIdTest() throws ApiException {
         String coll = null;
         String id = null;
-        DataDocument response = api.getDocumentById(coll, id);
+        Map<String, Object> response = api.getDocumentById(coll, id);
         // TODO: test validations
     }
 
@@ -138,7 +138,7 @@ public class DataApiTest {
     @Test
     public void getDocumentsTest() throws ApiException {
         String coll = null;
-        List<DataDocument> response = api.getDocuments(coll);
+        List<Map<String, Object>> response = api.getDocuments(coll);
         // TODO: test validations
     }
 
@@ -152,7 +152,7 @@ public class DataApiTest {
         String coll = null;
         String id = null;
         DataDocument dataDocument = null;
-        DataDocument response = api.updateDocumentById(coll, id, dataDocument);
+        Map<String, Object> response = api.updateDocumentById(coll, id, dataDocument);
         // TODO: test validations
     }
 

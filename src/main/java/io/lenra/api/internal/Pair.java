@@ -13,7 +13,7 @@
 
 package io.lenra.api.internal;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-20T13:50:13.979349Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-04T14:36:49.191394887Z[Etc/UTC]")
 public class Pair {
     private String name = "";
     private String value = "";

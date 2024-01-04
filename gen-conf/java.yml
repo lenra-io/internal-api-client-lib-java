@@ -5,4 +5,5 @@ apiPackage: io.lenra.api.internal.client
 groupId: io.lenra
 artifactId: lenra-internal-api-client
 artifactVersion: "1.0.0"
+disallowAdditionalPropertiesIfNotPresent: false
 modelPackage: io.lenra.api.internal.client.model

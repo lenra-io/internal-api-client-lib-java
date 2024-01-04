@@ -25,21 +25,21 @@ components:
       title: Document
       description: A document in MongoDB database
       type: object
-      properties:
-        _id:
-          type: string
-          description: The document identifier
-      additionalProperties: true
+      patternProperties:
+        ^[a-zA-Z0-9_]+$:
+          type: object
+      additionalProperties: {}
     data.query:
       title: Query
       description: Mongo data query
       type: object
-      properties: {}
       additionalProperties: true
     data.result.find:
       title: FindResult
       description: Find query result.
-      type: object
+      type: array
+      items:
+        $ref: "#/components/schemas/data.document"
       additionalProperties: {}
     data.update:
       title: Query

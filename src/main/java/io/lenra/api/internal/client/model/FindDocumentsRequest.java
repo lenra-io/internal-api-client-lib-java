@@ -52,11 +52,11 @@ import io.lenra.api.internal.JSON;
 /**
  * FindDocumentsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-20T13:50:13.979349Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-04T14:36:49.191394887Z[Etc/UTC]")
 public class FindDocumentsRequest {
   public static final String SERIALIZED_NAME_QUERY = "query";
   @SerializedName(SERIALIZED_NAME_QUERY)
-  private Map<String, Object> query = new HashMap<>();
+  private Map<String, Object> query;
 
   public static final String SERIALIZED_NAME_PROJECTION = "projection";
   @SerializedName(SERIALIZED_NAME_PROJECTION)
@@ -66,16 +66,7 @@ public class FindDocumentsRequest {
   }
 
   public FindDocumentsRequest query(Map<String, Object> query) {
-    
     this.query = query;
-    return this;
-  }
-
-  public FindDocumentsRequest putQueryItem(String key, Object queryItem) {
-    if (this.query == null) {
-      this.query = new HashMap<>();
-    }
-    this.query.put(key, queryItem);
     return this;
   }
 
@@ -83,11 +74,10 @@ public class FindDocumentsRequest {
    * Mongo data query
    * @return query
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Map<String, Object> getQuery() {
     return query;
   }
-
 
   public void setQuery(Map<String, Object> query) {
     this.query = query;
@@ -95,7 +85,6 @@ public class FindDocumentsRequest {
 
 
   public FindDocumentsRequest projection(Map<String, Object> projection) {
-    
     this.projection = projection;
     return this;
   }
@@ -108,7 +97,6 @@ public class FindDocumentsRequest {
   public Map<String, Object> getProjection() {
     return projection;
   }
-
 
   public void setProjection(Map<String, Object> projection) {
     this.projection = projection;

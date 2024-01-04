@@ -51,30 +51,21 @@ import io.lenra.api.internal.JSON;
 /**
  * UpdateManyDocumentsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-20T13:50:13.979349Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-04T14:36:49.191394887Z[Etc/UTC]")
 public class UpdateManyDocumentsRequest {
   public static final String SERIALIZED_NAME_FILTER = "filter";
   @SerializedName(SERIALIZED_NAME_FILTER)
-  private Map<String, Object> filter = new HashMap<>();
+  private Map<String, Object> filter;
 
   public static final String SERIALIZED_NAME_UPDATE = "update";
   @SerializedName(SERIALIZED_NAME_UPDATE)
-  private Map<String, Object> update = new HashMap<>();
+  private Map<String, Object> update;
 
   public UpdateManyDocumentsRequest() {
   }
 
   public UpdateManyDocumentsRequest filter(Map<String, Object> filter) {
-    
     this.filter = filter;
-    return this;
-  }
-
-  public UpdateManyDocumentsRequest putFilterItem(String key, Object filterItem) {
-    if (this.filter == null) {
-      this.filter = new HashMap<>();
-    }
-    this.filter.put(key, filterItem);
     return this;
   }
 
@@ -82,11 +73,10 @@ public class UpdateManyDocumentsRequest {
    * Mongo data query
    * @return filter
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Map<String, Object> getFilter() {
     return filter;
   }
-
 
   public void setFilter(Map<String, Object> filter) {
     this.filter = filter;
@@ -94,16 +84,7 @@ public class UpdateManyDocumentsRequest {
 
 
   public UpdateManyDocumentsRequest update(Map<String, Object> update) {
-    
     this.update = update;
-    return this;
-  }
-
-  public UpdateManyDocumentsRequest putUpdateItem(String key, Object updateItem) {
-    if (this.update == null) {
-      this.update = new HashMap<>();
-    }
-    this.update.put(key, updateItem);
     return this;
   }
 
@@ -111,11 +92,10 @@ public class UpdateManyDocumentsRequest {
    * Mongo data query
    * @return update
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Map<String, Object> getUpdate() {
     return update;
   }
-
 
   public void setUpdate(Map<String, Object> update) {
     this.update = update;
