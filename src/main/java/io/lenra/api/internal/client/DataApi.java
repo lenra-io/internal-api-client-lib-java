@@ -875,8 +875,8 @@ public class DataApi {
         <tr><td> 200 </td><td> Documents found </td><td>  -  </td></tr>
      </table>
      */
-    public Map<String, Object> findDocuments(String coll, FindDocumentsRequest findDocumentsRequest) throws ApiException {
-        ApiResponse<Map<String, Object>> localVarResp = findDocumentsWithHttpInfo(coll, findDocumentsRequest);
+    public List<Map<String, Object>> findDocuments(String coll, FindDocumentsRequest findDocumentsRequest) throws ApiException {
+        ApiResponse<List<Map<String, Object>>> localVarResp = findDocumentsWithHttpInfo(coll, findDocumentsRequest);
         return localVarResp.getData();
     }
 
@@ -893,9 +893,9 @@ public class DataApi {
         <tr><td> 200 </td><td> Documents found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Map<String, Object>> findDocumentsWithHttpInfo(String coll, FindDocumentsRequest findDocumentsRequest) throws ApiException {
+    public ApiResponse<List<Map<String, Object>>> findDocumentsWithHttpInfo(String coll, FindDocumentsRequest findDocumentsRequest) throws ApiException {
         okhttp3.Call localVarCall = findDocumentsValidateBeforeCall(coll, findDocumentsRequest, null);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<Map<String, Object>>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -913,10 +913,10 @@ public class DataApi {
         <tr><td> 200 </td><td> Documents found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call findDocumentsAsync(String coll, FindDocumentsRequest findDocumentsRequest, final ApiCallback<Map<String, Object>> _callback) throws ApiException {
+    public okhttp3.Call findDocumentsAsync(String coll, FindDocumentsRequest findDocumentsRequest, final ApiCallback<List<Map<String, Object>>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = findDocumentsValidateBeforeCall(coll, findDocumentsRequest, _callback);
-        Type localVarReturnType = new TypeToken<Map<String, Object>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<Map<String, Object>>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
