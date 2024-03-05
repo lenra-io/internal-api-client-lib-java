@@ -13,7 +13,7 @@
 
 package io.lenra.api.internal;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-20T13:50:13.979349Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-05T16:58:04.750750451Z[Etc/UTC]")
 public class Configuration {
     public static final String VERSION = "1.0.0";
 

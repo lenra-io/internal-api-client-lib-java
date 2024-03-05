@@ -6,13 +6,14 @@ All URIs are relative to *http://localhost:4001*
 |------------- | ------------- | -------------|
 | [**abortTransaction**](DataApi.md#abortTransaction) | **POST** /app-api/v1/data/transaction/abort | Aborts a transaction |
 | [**commitTransaction**](DataApi.md#commitTransaction) | **POST** /app-api/v1/data/transaction/commit | Commits a transaction |
-| [**createDocument**](DataApi.md#createDocument) | **POST** /app-api/v1/data/colls/{coll}/docs | Creates a document in database |
+| [**createDocument**](DataApi.md#createDocument) | **POST** /app-api/v1/data/colls/{coll}/docs | Creates one document in database |
 | [**createTransaction**](DataApi.md#createTransaction) | **POST** /app-api/v1/data/transaction | Creates a transaction |
 | [**deleteCollection**](DataApi.md#deleteCollection) | **DELETE** /app-api/v1-api/v1/data/colls/{coll} | Deletes a collection from database |
 | [**deleteDocumentById**](DataApi.md#deleteDocumentById) | **DELETE** /app-api/v1/data/colls/{coll}/docs/{id} | Deletes a document from database |
 | [**findDocuments**](DataApi.md#findDocuments) | **POST** /app-api/v1/data/colls/{coll}/find | Finds documents in database |
 | [**getDocumentById**](DataApi.md#getDocumentById) | **GET** /app-api/v1/data/colls/{coll}/docs/{id} | Gets a document from database |
 | [**getDocuments**](DataApi.md#getDocuments) | **GET** /app-api/v1/data/colls/{coll}/docs | Gets documents from database |
+| [**insertManyDocuments**](DataApi.md#insertManyDocuments) | **POST** /app-api/v1/data/colls/{coll}/insertMany | Inserts many documents in database |
 | [**updateDocumentById**](DataApi.md#updateDocumentById) | **PUT** /app-api/v1/data/colls/{coll}/docs/{id} | Updates a document in database |
 | [**updateManyDocuments**](DataApi.md#updateManyDocuments) | **POST** /app-api/v1/data/colls/{coll}/updateMany | Updates many documents in database |
 
@@ -139,9 +140,9 @@ null (empty response body)
 
 <a id="createDocument"></a>
 # **createDocument**
-> DataDocument createDocument(coll, body)
+> Map&lt;String, Object&gt; createDocument(coll, body)
 
-Creates a document in database
+Creates one document in database
 
 ### Example
 ```java
@@ -166,7 +167,7 @@ public class Example {
     String coll = "coll_example"; // String | The document collection name
     Object body = null; // Object | The document to create
     try {
-      DataDocument result = apiInstance.createDocument(coll, body);
+      Map<String, Object> result = apiInstance.createDocument(coll, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#createDocument");
@@ -188,7 +189,7 @@ public class Example {
 
 ### Return type
 
-[**DataDocument**](DataDocument.md)
+**Map&lt;String, Object&gt;**
 
 ### Authorization
 
@@ -331,7 +332,7 @@ null (empty response body)
 
 <a id="deleteDocumentById"></a>
 # **deleteDocumentById**
-> DataDocument deleteDocumentById(coll, id)
+> Map&lt;String, Object&gt; deleteDocumentById(coll, id)
 
 Deletes a document from database
 
@@ -358,7 +359,7 @@ public class Example {
     String coll = "coll_example"; // String | The document collection name
     String id = "id_example"; // String | The document identifier
     try {
-      DataDocument result = apiInstance.deleteDocumentById(coll, id);
+      Map<String, Object> result = apiInstance.deleteDocumentById(coll, id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#deleteDocumentById");
@@ -380,7 +381,7 @@ public class Example {
 
 ### Return type
 
-[**DataDocument**](DataDocument.md)
+**Map&lt;String, Object&gt;**
 
 ### Authorization
 
@@ -398,7 +399,7 @@ public class Example {
 
 <a id="findDocuments"></a>
 # **findDocuments**
-> Map&lt;String, Object&gt; findDocuments(coll, findDocumentsRequest)
+> List&lt;Map&lt;String, Object&gt;&gt; findDocuments(coll, findDocumentsRequest)
 
 Finds documents in database
 
@@ -425,7 +426,7 @@ public class Example {
     String coll = "coll_example"; // String | The document collection name
     FindDocumentsRequest findDocumentsRequest = new FindDocumentsRequest(); // FindDocumentsRequest | The query to find documents
     try {
-      Map<String, Object> result = apiInstance.findDocuments(coll, findDocumentsRequest);
+      List<Map<String, Object>> result = apiInstance.findDocuments(coll, findDocumentsRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#findDocuments");
@@ -447,7 +448,7 @@ public class Example {
 
 ### Return type
 
-**Map&lt;String, Object&gt;**
+[**List&lt;Map&lt;String, Object&gt;&gt;**](Map.md)
 
 ### Authorization
 
@@ -465,7 +466,7 @@ public class Example {
 
 <a id="getDocumentById"></a>
 # **getDocumentById**
-> DataDocument getDocumentById(coll, id)
+> Map&lt;String, Object&gt; getDocumentById(coll, id)
 
 Gets a document from database
 
@@ -492,7 +493,7 @@ public class Example {
     String coll = "coll_example"; // String | The document collection name
     String id = "id_example"; // String | The document identifier
     try {
-      DataDocument result = apiInstance.getDocumentById(coll, id);
+      Map<String, Object> result = apiInstance.getDocumentById(coll, id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#getDocumentById");
@@ -514,7 +515,7 @@ public class Example {
 
 ### Return type
 
-[**DataDocument**](DataDocument.md)
+**Map&lt;String, Object&gt;**
 
 ### Authorization
 
@@ -532,7 +533,7 @@ public class Example {
 
 <a id="getDocuments"></a>
 # **getDocuments**
-> List&lt;DataDocument&gt; getDocuments(coll)
+> List&lt;Map&lt;String, Object&gt;&gt; getDocuments(coll)
 
 Gets documents from database
 
@@ -558,7 +559,7 @@ public class Example {
     DataApi apiInstance = new DataApi(defaultClient);
     String coll = "coll_example"; // String | The document collection name
     try {
-      List<DataDocument> result = apiInstance.getDocuments(coll);
+      List<Map<String, Object>> result = apiInstance.getDocuments(coll);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#getDocuments");
@@ -579,7 +580,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;DataDocument&gt;**](DataDocument.md)
+[**List&lt;Map&lt;String, Object&gt;&gt;**](Map.md)
 
 ### Authorization
 
@@ -595,9 +596,76 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Documents found |  -  |
 
+<a id="insertManyDocuments"></a>
+# **insertManyDocuments**
+> InsertManyDocuments200Response insertManyDocuments(coll, insertManyDocumentsRequest)
+
+Inserts many documents in database
+
+### Example
+```java
+// Import classes:
+import io.lenra.api.internal.ApiClient;
+import io.lenra.api.internal.ApiException;
+import io.lenra.api.internal.Configuration;
+import io.lenra.api.internal.auth.*;
+import io.lenra.api.internal.models.*;
+import io.lenra.api.internal.client.DataApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost:4001");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    DataApi apiInstance = new DataApi(defaultClient);
+    String coll = "coll_example"; // String | The documents collection name
+    InsertManyDocumentsRequest insertManyDocumentsRequest = new InsertManyDocumentsRequest(); // InsertManyDocumentsRequest | The documents to create
+    try {
+      InsertManyDocuments200Response result = apiInstance.insertManyDocuments(coll, insertManyDocumentsRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataApi#insertManyDocuments");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **coll** | **String**| The documents collection name | |
+| **insertManyDocumentsRequest** | [**InsertManyDocumentsRequest**](InsertManyDocumentsRequest.md)| The documents to create | |
+
+### Return type
+
+[**InsertManyDocuments200Response**](InsertManyDocuments200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Documents inserted |  -  |
+
 <a id="updateDocumentById"></a>
 # **updateDocumentById**
-> DataDocument updateDocumentById(coll, id, dataDocument)
+> Map&lt;String, Object&gt; updateDocumentById(coll, id, requestBody)
 
 Updates a document in database
 
@@ -623,9 +691,9 @@ public class Example {
     DataApi apiInstance = new DataApi(defaultClient);
     String coll = "coll_example"; // String | The document collection name
     String id = "id_example"; // String | The document identifier
-    DataDocument dataDocument = new DataDocument(); // DataDocument | The document to update
+    Map<String, Object> requestBody = null; // Map<String, Object> | The document to update
     try {
-      DataDocument result = apiInstance.updateDocumentById(coll, id, dataDocument);
+      Map<String, Object> result = apiInstance.updateDocumentById(coll, id, requestBody);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataApi#updateDocumentById");
@@ -644,11 +712,11 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **coll** | **String**| The document collection name | |
 | **id** | **String**| The document identifier | |
-| **dataDocument** | [**DataDocument**](DataDocument.md)| The document to update | |
+| **requestBody** | [**Map&lt;String, Object&gt;**](Object.md)| The document to update | |
 
 ### Return type
 
-[**DataDocument**](DataDocument.md)
+**Map&lt;String, Object&gt;**
 
 ### Authorization
 

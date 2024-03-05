@@ -1,6 +1,16 @@
 # lenra-internal-api-client
 
 ```bash
+# Load API
+## With wget
+wget https://github.com/lenra-io/api/releases/latest/download/load-api.sh -O - -q | bash
+## With curl
+curl -fsSL https://github.com/lenra-io/api/releases/latest/download/load-api.sh | bash
+```
+
+Generate
+
+```bash
 docker run --rm -v ${PWD}:/local --workdir /local openapitools/openapi-generator-cli batch /local/gen-conf/java.yml
 ```
 

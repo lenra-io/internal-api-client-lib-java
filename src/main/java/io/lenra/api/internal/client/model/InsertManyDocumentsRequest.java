@@ -19,11 +19,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.lenra.api.internal.client.model.DataOptions;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,79 +47,33 @@ import java.util.Set;
 import io.lenra.api.internal.JSON;
 
 /**
- * FindDocumentsRequest
+ * InsertManyDocumentsRequest
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-05T16:58:04.750750451Z[Etc/UTC]")
-public class FindDocumentsRequest {
-  public static final String SERIALIZED_NAME_QUERY = "query";
-  @SerializedName(SERIALIZED_NAME_QUERY)
-  private Map<String, Object> query = new HashMap<>();
+public class InsertManyDocumentsRequest {
+  public static final String SERIALIZED_NAME_DOCUMENTS = "documents";
+  @SerializedName(SERIALIZED_NAME_DOCUMENTS)
+  private Object documents = null;
 
-  public static final String SERIALIZED_NAME_PROJECTION = "projection";
-  @SerializedName(SERIALIZED_NAME_PROJECTION)
-  private Map<String, Object> projection = new HashMap<>();
-
-  public static final String SERIALIZED_NAME_OPTIONS = "options";
-  @SerializedName(SERIALIZED_NAME_OPTIONS)
-  private DataOptions options;
-
-  public FindDocumentsRequest() {
+  public InsertManyDocumentsRequest() {
   }
 
-  public FindDocumentsRequest query(Map<String, Object> query) {
-    this.query = query;
+  public InsertManyDocumentsRequest documents(Object documents) {
+    this.documents = documents;
     return this;
   }
 
    /**
-   * Mongo data query
-   * @return query
-  **/
-  @javax.annotation.Nonnull
-  public Map<String, Object> getQuery() {
-    return query;
-  }
-
-  public void setQuery(Map<String, Object> query) {
-    this.query = query;
-  }
-
-
-  public FindDocumentsRequest projection(Map<String, Object> projection) {
-    this.projection = projection;
-    return this;
-  }
-
-   /**
-   * Get projection
-   * @return projection
+   * Get documents
+   * @return documents
   **/
   @javax.annotation.Nullable
-  public Map<String, Object> getProjection() {
-    return projection;
+  public Object getDocuments() {
+    return documents;
   }
 
-  public void setProjection(Map<String, Object> projection) {
-    this.projection = projection;
-  }
-
-
-  public FindDocumentsRequest options(DataOptions options) {
-    this.options = options;
-    return this;
-  }
-
-   /**
-   * Get options
-   * @return options
-  **/
-  @javax.annotation.Nullable
-  public DataOptions getOptions() {
-    return options;
-  }
-
-  public void setOptions(DataOptions options) {
-    this.options = options;
+  public void setDocuments(Object documents) {
+    this.documents = documents;
   }
 
   /**
@@ -138,9 +89,9 @@ public class FindDocumentsRequest {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the FindDocumentsRequest instance itself
+   * @return the InsertManyDocumentsRequest instance itself
    */
-  public FindDocumentsRequest putAdditionalProperty(String key, Object value) {
+  public InsertManyDocumentsRequest putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -179,25 +130,21 @@ public class FindDocumentsRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FindDocumentsRequest findDocumentsRequest = (FindDocumentsRequest) o;
-    return Objects.equals(this.query, findDocumentsRequest.query) &&
-        Objects.equals(this.projection, findDocumentsRequest.projection) &&
-        Objects.equals(this.options, findDocumentsRequest.options)&&
-        Objects.equals(this.additionalProperties, findDocumentsRequest.additionalProperties);
+    InsertManyDocumentsRequest insertManyDocumentsRequest = (InsertManyDocumentsRequest) o;
+    return Objects.equals(this.documents, insertManyDocumentsRequest.documents)&&
+        Objects.equals(this.additionalProperties, insertManyDocumentsRequest.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(query, projection, options, additionalProperties);
+    return Objects.hash(documents, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FindDocumentsRequest {\n");
-    sb.append("    query: ").append(toIndentedString(query)).append("\n");
-    sb.append("    projection: ").append(toIndentedString(projection)).append("\n");
-    sb.append("    options: ").append(toIndentedString(options)).append("\n");
+    sb.append("class InsertManyDocumentsRequest {\n");
+    sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -221,55 +168,49 @@ public class FindDocumentsRequest {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("query");
-    openapiFields.add("projection");
-    openapiFields.add("options");
+    openapiFields.add("documents");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("query");
+    openapiRequiredFields.add("documents");
   }
 
  /**
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to FindDocumentsRequest
+  * @throws IOException if the JSON Element is invalid with respect to InsertManyDocumentsRequest
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!FindDocumentsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in FindDocumentsRequest is not found in the empty JSON string", FindDocumentsRequest.openapiRequiredFields.toString()));
+        if (!InsertManyDocumentsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in InsertManyDocumentsRequest is not found in the empty JSON string", InsertManyDocumentsRequest.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : FindDocumentsRequest.openapiRequiredFields) {
+      for (String requiredField : InsertManyDocumentsRequest.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the optional field `options`
-      if (jsonObj.get("options") != null && !jsonObj.get("options").isJsonNull()) {
-        DataOptions.validateJsonElement(jsonObj.get("options"));
-      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!FindDocumentsRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'FindDocumentsRequest' and its subtypes
+       if (!InsertManyDocumentsRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'InsertManyDocumentsRequest' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<FindDocumentsRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(FindDocumentsRequest.class));
+       final TypeAdapter<InsertManyDocumentsRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(InsertManyDocumentsRequest.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<FindDocumentsRequest>() {
+       return (TypeAdapter<T>) new TypeAdapter<InsertManyDocumentsRequest>() {
            @Override
-           public void write(JsonWriter out, FindDocumentsRequest value) throws IOException {
+           public void write(JsonWriter out, InsertManyDocumentsRequest value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -297,12 +238,12 @@ public class FindDocumentsRequest {
            }
 
            @Override
-           public FindDocumentsRequest read(JsonReader in) throws IOException {
+           public InsertManyDocumentsRequest read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
-             FindDocumentsRequest instance = thisAdapter.fromJsonTree(jsonObj);
+             InsertManyDocumentsRequest instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -329,18 +270,18 @@ public class FindDocumentsRequest {
   }
 
  /**
-  * Create an instance of FindDocumentsRequest given an JSON string
+  * Create an instance of InsertManyDocumentsRequest given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of FindDocumentsRequest
-  * @throws IOException if the JSON string is invalid with respect to FindDocumentsRequest
+  * @return An instance of InsertManyDocumentsRequest
+  * @throws IOException if the JSON string is invalid with respect to InsertManyDocumentsRequest
   */
-  public static FindDocumentsRequest fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, FindDocumentsRequest.class);
+  public static InsertManyDocumentsRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, InsertManyDocumentsRequest.class);
   }
 
  /**
-  * Convert an instance of FindDocumentsRequest to an JSON string
+  * Convert an instance of InsertManyDocumentsRequest to an JSON string
   *
   * @return JSON string
   */
