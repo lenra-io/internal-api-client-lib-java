@@ -5,8 +5,10 @@ api/openapi.yaml
 build.gradle
 build.sbt
 docs/DataApi.md
-docs/DataDocument.md
+docs/DataOptions.md
 docs/FindDocumentsRequest.md
+docs/InsertManyDocuments200Response.md
+docs/InsertManyDocumentsRequest.md
 docs/UpdateManyDocumentsRequest.md
 git_push.sh
 gradle.properties
@@ -35,6 +37,11 @@ src/main/java/io/lenra/api/internal/auth/HttpBasicAuth.java
 src/main/java/io/lenra/api/internal/auth/HttpBearerAuth.java
 src/main/java/io/lenra/api/internal/client/DataApi.java
 src/main/java/io/lenra/api/internal/client/model/AbstractOpenApiSchema.java
-src/main/java/io/lenra/api/internal/client/model/DataDocument.java
+src/main/java/io/lenra/api/internal/client/model/DataOptions.java
 src/main/java/io/lenra/api/internal/client/model/FindDocumentsRequest.java
+src/main/java/io/lenra/api/internal/client/model/InsertManyDocuments200Response.java
+src/main/java/io/lenra/api/internal/client/model/InsertManyDocumentsRequest.java
 src/main/java/io/lenra/api/internal/client/model/UpdateManyDocumentsRequest.java
+src/test/java/io/lenra/api/internal/client/model/DataOptionsTest.java
+src/test/java/io/lenra/api/internal/client/model/InsertManyDocuments200ResponseTest.java
+src/test/java/io/lenra/api/internal/client/model/InsertManyDocumentsRequestTest.java
