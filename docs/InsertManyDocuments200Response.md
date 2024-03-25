@@ -1,14 +1,13 @@
 
 
-# UpdateManyDocumentsRequest
+# InsertManyDocuments200Response
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**filter** |  | Mongo data query |  |
-|**update** |  | Mongo data query |  |
+|**insertedIds** | **List&lt;String&gt;** |  |  |
 
 
 
