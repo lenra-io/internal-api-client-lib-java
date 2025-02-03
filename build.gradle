@@ -9,7 +9,7 @@ buildscript {
 
 plugins {
     id 'java-library'
-    id 'com.vanniktech.maven.publish' version '0.28.0'
+    id 'com.vanniktech.maven.publish' version '0.30.0'
 }
 apply plugin: 'com.diffplug.spotless'
 
